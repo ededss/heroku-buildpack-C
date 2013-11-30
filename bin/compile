@@ -7,8 +7,8 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 echo $BUILD_DIR
-mkdir /app/myglpk
-./configure --prefix /app/myglpk
+mkdir $BUILD_DIR/myglpk
+./configure --prefix $BUILD_DIR/myglpk
 file1="Makefile"
 file2="makefile"
 if [ -f $file1 ]
@@ -22,5 +22,7 @@ else
     exit 1;
 fi
 
-make
+make check
+make install
+echo "----->made"
 echo "-----> Compilation done"
