@@ -7,8 +7,8 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 echo $BUILD_DIR
-mkdir ./myglpk
-./configure --prefix ./myglpk
+mkdir /app/myglpk
+./configure --prefix /app/myglpk
 file1="Makefile"
 file2="makefile"
 if [ -f $file1 ]
